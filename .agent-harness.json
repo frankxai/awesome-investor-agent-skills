@@ -1,0 +1,20 @@
+{
+  "name": "awesome-investor-agent-skills",
+  "classification": "content-or-program",
+  "owner": "FrankX AI",
+  "updated": "2026-06-23",
+  "remote": "https://github.com/frankxai/awesome-investor-agent-skills.git",
+  "health": {
+    "primaryCheck": "./scripts/validate-catalog.ps1",
+    "manualChecks": [
+      "Review AGENTS.md before edits",
+      "Preserve public/private boundary",
+      "Scan for regulated claims and live execution language"
+    ]
+  },
+  "agentGuidance": {
+    "readAgentsMd": true,
+    "avoidPrivateMemory": true,
+    "preserveExistingConventions": true
+  }
+}
