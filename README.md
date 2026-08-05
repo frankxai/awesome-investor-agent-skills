@@ -24,6 +24,7 @@ Use public data and reproducible notebooks; separate collection, analysis, backt
 | [LEAN](https://github.com/QuantConnect/Lean) | Apache-2.0 · 21,025★ | Execution-adjacent engine; education/backtesting only. |
 | [cvxportfolio](https://github.com/cvxgrp/cvxportfolio) | GPL-3.0 · 1,244★ | Portfolio optimization/backtesting. |
 | [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) | MIT · 28,345★ | Bounded research assistants with approval gates. |
+| [TradingAgents](https://github.com/TauricResearch/TradingAgents) | Apache-2.0 · 95,714★ | Multi-agent financial-research framework; execution-adjacent, so keep use to public data and simulation. |
 
 ## 6-Pillar curation lens
 
@@ -61,6 +62,6 @@ Open a PR with a primary URL, one-sentence distinct value, current maintenance e
 
 ## Research method
 
-This monthly pulse queried GitHub repository metadata on **2026-08-03** for identity, approximate stars, archived state, activity, and license posture. `NOASSERTION` means GitHub did not return a standard SPDX identifier; review the repository license before adoption. Counts are dated discovery signals, not rankings. Nothing here is financial, legal, medical, or safety advice.
+This monthly pulse queried selected GitHub repository metadata on **2026-08-05** for identity, approximate stars, archived state, activity, and license posture. Earlier rows retain their prior dated snapshots where they were not re-fetched. `NOASSERTION` means GitHub did not return a standard SPDX identifier; review the repository license before adoption. Counts are dated discovery signals, not rankings. Nothing here is financial, legal, medical, or safety advice.
 
-Maintained as independent, web-first curation by FrankX. Last research pulse: **2026-08-03**.
+Maintained as independent, web-first curation by FrankX. Last research pulse: **2026-08-05**.
