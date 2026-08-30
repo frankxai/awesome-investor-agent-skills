@@ -10,6 +10,25 @@ This is an independent, **web-first** catalog. It remains useful if every FrankX
 
 Use public data and reproducible notebooks; separate collection, analysis, backtesting, and any regulated or execution-adjacent action.
 
+<!-- earned-skill-index:2026-08-30 -->
+
+## Earned agent skills (start here)
+
+Operators get leverage from **about 5–7 named workflows**, not bulk dumps. Hub: [https://github.com/frankxai/awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills) · [earned index](https://github.com/frankxai/awesome-hermes-agent-skills/blob/main/docs/EARNED-SKILLS.md) · [safety gate](https://github.com/frankxai/awesome-hermes-agent-skills/blob/main/docs/QUALITY-AND-SAFETY.md).
+
+**Investor research skills (not advice)**
+
+| Pack | Job |
+| --- | --- |
+| [OpenBB-finance/OpenBB](https://github.com/OpenBB-finance/OpenBB) | Public-market research platform |
+| [microsoft/qlib](https://github.com/microsoft/qlib) | Simulation and research — not live trading |
+| [longbridge/skills](https://github.com/longbridge/skills) | Multi-region market skills |
+| [longsizhuo/openInvest](https://github.com/longsizhuo/openInvest) | Investment research patterns |
+| [NVIDIA/SkillSpector](https://github.com/NVIDIA/SkillSpector) | Scan before install |
+
+Scan with [NVIDIA SkillSpector](https://github.com/NVIDIA/SkillSpector) before a live profile. Do not install unsigned ZIP/S3 skill blobs or OpenClaw mass dumps.
+
+
 ## Peer directories and standards
 
 [OpenBB-finance/OpenBB](https://github.com/OpenBB-finance/OpenBB) · [microsoft/qlib](https://github.com/microsoft/qlib)
