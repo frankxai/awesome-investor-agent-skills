@@ -1,6 +1,6 @@
 # Awesome Investor Agent Skills
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Stars](https://img.shields.io/github/stars/frankxai/awesome-investor-agent-skills?style=flat)](https://github.com/frankxai/awesome-investor-agent-skills/stargazers) [![Last commit](https://img.shields.io/github/last-commit/frankxai/awesome-investor-agent-skills?style=flat)](https://github.com/frankxai/awesome-investor-agent-skills/commits/main)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Stars](https://img.shields.io/github/stars/frankxai/awesome-investor-agent-skills?style=flat)](https://github.com/frankxai/awesome-investor-agent-skills) [![Last commit](https://img.shields.io/github/last-commit/frankxai/awesome-investor-agent-skills?style=flat)](https://github.com/frankxai/awesome-investor-agent-skills/commits/main)
 
 > Web-first research and analysis tools for investor workflows: educational research and simulation only, never personalized investment advice.
 
