@@ -1,0 +1,22 @@
+name: Catalogue
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+      - name: Catalogue and public-safety validation
+        run: node scripts/validate-catalog.mjs
+      - name: Harvester and validator tests (offline)
+        run: node --test "scripts/*.test.mjs"

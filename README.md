@@ -10,6 +10,17 @@ This is an independent, **web-first** catalog. It remains useful if every FrankX
 
 Use public data and reproducible notebooks; separate collection, analysis, backtesting, and any regulated or execution-adjacent action.
 
+## A living catalogue: the weekly research loop
+
+Every Monday a job searches GitHub for investing skill packs, finance MCP servers, filings tooling, portfolio maths and leakage-safe backtesting, classifies each licence, and opens a pull request with a report (see [reports/](reports/)). A reviewer decides what enters the catalogue. Nothing is added automatically.
+
+- **Licence traps are named up front:** AGPL and other network copyleft, GPL, no licence, and custom terms are flagged so nobody copies code they cannot use.
+- **Directories to mine:** curated lists are reported separately as sources for the next search.
+- **Catalogue pulse:** entries that were archived, changed licence, or moved sharply in stars are flagged.
+- **Change what we watch** by editing [data/sources.json](data/sources.json). Run it yourself with `GITHUB_TOKEN=... node scripts/harvest.mjs`.
+
+Related: [GenInvestor](https://github.com/frankxai/GenInvestor), open-source investor tooling where every number shows its source, is one consumer of this research. This list stays independent and useful without it.
+
 <!-- earned-skill-index:2026-08-30 -->
 
 ## Earned agent skills (start here)

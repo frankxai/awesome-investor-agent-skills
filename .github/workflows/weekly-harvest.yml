@@ -1,0 +1,58 @@
+name: Weekly harvest
+
+# Every Monday: search GitHub for investing skills, MCP servers and research tools, classify their
+# licences, and open a PULL REQUEST with the report for review. Nothing is merged automatically and
+# nothing enters data/repos.json without a reviewer.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: weekly-harvest
+  cancel-in-progress: false
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+
+      - name: Validate before harvesting
+        run: node scripts/validate-catalog.mjs
+
+      - name: Harvest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/harvest.mjs --limit 30
+
+      - name: Open a review pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          week="$(date -u +%G-W%V)"
+          if git diff --quiet -- data/candidates.json && [ -z "$(git status --porcelain reports)" ]; then
+            echo "Nothing new this week."
+            exit 0
+          fi
+          branch="harvest/$week"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add data/candidates.json "reports/$week.md"
+          git commit -m "chore(harvest): weekly candidates $week"
+          git push -u origin "$branch"
+          if ! gh pr create --base main --head "$branch" --title "Weekly harvest $week" --body-file "reports/$week.md"; then
+            # PR creation is disabled by repository settings: file the report as an issue instead.
+            gh issue create --title "Weekly harvest $week" --body-file "reports/$week.md"
+          fi
