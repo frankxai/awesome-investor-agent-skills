@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "items": {
+    "https://github.com/sickn33/agentic-awesome-skills": {
+      "url": "https://github.com/sickn33/agentic-awesome-skills",
+      "name": "sickn33/agentic-awesome-skills",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 47101,
+      "licence": "MIT"
+    },
+    "https://github.com/hkuds/vibe-trading": {
+      "url": "https://github.com/HKUDS/Vibe-Trading",
+      "name": "HKUDS/Vibe-Trading",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 34366,
+      "licence": "MIT"
+    },
+    "https://github.com/stefan-jansen/machine-learning-for-trading": {
+      "url": "https://github.com/stefan-jansen/machine-learning-for-trading",
+      "name": "stefan-jansen/machine-learning-for-trading",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 21134,
+      "licence": "MIT"
+    },
+    "https://github.com/openbyteinc/quantdinger": {
+      "url": "https://github.com/OpenByteInc/QuantDinger",
+      "name": "OpenByteInc/QuantDinger",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 12334,
+      "licence": "Apache-2.0"
+    },
+    "https://github.com/alirezarezvani/claude-skills": {
+      "url": "https://github.com/alirezarezvani/claude-skills",
+      "name": "alirezarezvani/claude-skills",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 26975,
+      "licence": "MIT"
+    },
+    "https://github.com/jerbouma/financetoolkit": {
+      "url": "https://github.com/JerBouma/FinanceToolkit",
+      "name": "JerBouma/FinanceToolkit",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 5391,
+      "licence": "MIT"
+    },
+    "https://github.com/atilaahmettaner/tradingview-mcp": {
+      "url": "https://github.com/atilaahmettaner/tradingview-mcp",
+      "name": "atilaahmettaner/tradingview-mcp",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 4873,
+      "licence": "MIT"
+    },
+    "https://github.com/alvinreal/awesome-opensource-ai": {
+      "url": "https://github.com/alvinreal/awesome-opensource-ai",
+      "name": "alvinreal/awesome-opensource-ai",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 4806,
+      "licence": "CC0-1.0"
+    },
+    "https://github.com/simonlin1212/tradingagents-astock": {
+      "url": "https://github.com/simonlin1212/TradingAgents-astock",
+      "name": "simonlin1212/TradingAgents-astock",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 3597,
+      "licence": "Apache-2.0"
+    },
+    "https://github.com/fasiondog/hikyuu": {
+      "url": "https://github.com/fasiondog/hikyuu",
+      "name": "fasiondog/hikyuu",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 3536,
+      "licence": "Apache-2.0"
+    },
+    "https://github.com/himself65/finance-skills": {
+      "url": "https://github.com/himself65/finance-skills",
+      "name": "himself65/finance-skills",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 3354,
+      "licence": "MIT"
+    },
+    "https://github.com/tradermonty/claude-trading-skills": {
+      "url": "https://github.com/tradermonty/claude-trading-skills",
+      "name": "tradermonty/claude-trading-skills",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 2918,
+      "licence": "MIT"
+    },
+    "https://github.com/ai-boost/awesome-prompts": {
+      "url": "https://github.com/ai-boost/awesome-prompts",
+      "name": "ai-boost/awesome-prompts",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 8972,
+      "licence": "GPL-3.0"
+    },
+    "https://github.com/dgunning/edgartools": {
+      "url": "https://github.com/dgunning/edgartools",
+      "name": "dgunning/edgartools",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 2757,
+      "licence": "MIT"
+    },
+    "https://github.com/skfolio/skfolio": {
+      "url": "https://github.com/skfolio/skfolio",
+      "name": "skfolio/skfolio",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 2453,
+      "licence": "BSD-3-Clause"
+    },
+    "https://github.com/ricequant/rqalpha": {
+      "url": "https://github.com/ricequant/rqalpha",
+      "name": "ricequant/rqalpha",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 6803,
+      "licence": "NOASSERTION"
+    },
+    "https://github.com/coding-kitties/investing-algorithm-framework": {
+      "url": "https://github.com/coding-kitties/investing-algorithm-framework",
+      "name": "coding-kitties/investing-algorithm-framework",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 2137,
+      "licence": "Apache-2.0"
+    },
+    "https://github.com/ginlix-ai/langalpha": {
+      "url": "https://github.com/ginlix-ai/LangAlpha",
+      "name": "ginlix-ai/LangAlpha",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 1791,
+      "licence": "Apache-2.0"
+    },
+    "https://github.com/daymade/claude-code-skills": {
+      "url": "https://github.com/daymade/claude-code-skills",
+      "name": "daymade/claude-code-skills",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 1437,
+      "licence": "MIT"
+    },
+    "https://github.com/brycewang-stanford/awesome-journal-skills": {
+      "url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills",
+      "name": "brycewang-stanford/Awesome-Journal-Skills",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 1194,
+      "licence": "MIT"
+    },
+    "https://github.com/wilsonfreitas/awesome-quant": {
+      "url": "https://github.com/wilsonfreitas/awesome-quant",
+      "name": "wilsonfreitas/awesome-quant",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 29871,
+      "licence": null
+    },
+    "https://github.com/mobinx/awesome-mcp-list": {
+      "url": "https://github.com/MobinX/awesome-mcp-list",
+      "name": "MobinX/awesome-mcp-list",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 884,
+      "licence": "CC0-1.0"
+    },
+    "https://github.com/guangxiangdebizi/financemcp": {
+      "url": "https://github.com/guangxiangdebizi/FinanceMCP",
+      "name": "guangxiangdebizi/FinanceMCP",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 860,
+      "licence": "MIT"
+    },
+    "https://github.com/barter-rs/barter-rs": {
+      "url": "https://github.com/barter-rs/barter-rs",
+      "name": "barter-rs/barter-rs",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 2329,
+      "licence": "MIT"
+    },
+    "https://github.com/wshobson/maverick-mcp": {
+      "url": "https://github.com/wshobson/maverick-mcp",
+      "name": "wshobson/maverick-mcp",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 680,
+      "licence": "MIT"
+    },
+    "https://github.com/questflowai/investorskills": {
+      "url": "https://github.com/questflowai/investorskills",
+      "name": "questflowai/investorskills",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 1876,
+      "licence": "MIT"
+    },
+    "https://github.com/cinar/indicator": {
+      "url": "https://github.com/cinar/indicator",
+      "name": "cinar/indicator",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 1836,
+      "licence": "AGPL-3.0"
+    },
+    "https://github.com/jqueryscript/awesome-claude-code": {
+      "url": "https://github.com/jqueryscript/awesome-claude-code",
+      "name": "jqueryscript/awesome-claude-code",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 520,
+      "licence": "CC0-1.0"
+    },
+    "https://github.com/cinar/indicatorts": {
+      "url": "https://github.com/cinar/indicatorts",
+      "name": "cinar/indicatorts",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 477,
+      "licence": "MIT"
+    },
+    "https://github.com/robcerda/monarch-mcp-server": {
+      "url": "https://github.com/robcerda/monarch-mcp-server",
+      "name": "robcerda/monarch-mcp-server",
+      "status": "new",
+      "firstSeen": "2026-09-30",
+      "lastSeen": "2026-09-30",
+      "stars": 402,
+      "licence": "MIT"
+    }
+  }
+}

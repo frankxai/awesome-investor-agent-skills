@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "description": "What the weekly harvest searches for. Edit this file to change what we watch; the harvester only proposes candidates and never edits data/repos.json.",
+  "minStars": 25,
+  "maxAgeDays": 365,
+  "queries": [
+    { "id": "agent-skills-finance", "type": "repositories", "q": "topic:agent-skills finance", "hint": "investing skill packs" },
+    { "id": "agent-skills-investing", "type": "repositories", "q": "agent skills SKILL.md investing stocks in:name,description,readme", "hint": "investing skill packs" },
+    { "id": "mcp-finance", "type": "repositories", "q": "topic:mcp-server finance", "hint": "finance MCP servers" },
+    { "id": "mcp-stocks", "type": "repositories", "q": "mcp server stock market data in:name,description", "hint": "market data MCP" },
+    { "id": "mcp-crypto", "type": "repositories", "q": "mcp server crypto onchain in:name,description", "hint": "crypto MCP" },
+    { "id": "sec-edgar", "type": "repositories", "q": "sec edgar filings python OR typescript in:name,description", "hint": "SEC filings tooling" },
+    { "id": "llm-trading", "type": "repositories", "q": "topic:llm-trading", "hint": "LLM trading research" },
+    { "id": "trading-agents", "type": "repositories", "q": "multi-agent trading research framework in:name,description", "hint": "multi-agent research desks" },
+    { "id": "portfolio-optimization", "type": "repositories", "q": "portfolio optimization python library in:name,description", "hint": "portfolio maths" },
+    { "id": "backtesting", "type": "repositories", "q": "backtesting framework in:name,description", "hint": "backtesting" },
+    { "id": "lookahead-bias", "type": "repositories", "q": "lookahead bias LLM backtest leakage in:name,description,readme", "hint": "leakage and evaluation" },
+    { "id": "agent-os", "type": "repositories", "q": "agentic operating system finance in:name,description", "hint": "agent operating systems" },
+    { "id": "skill-files-finance", "type": "code", "q": "filename:SKILL.md investing OR portfolio OR equity", "hint": "SKILL.md files about investing" }
+  ],
+  "executionKeywords": ["live trading", "auto-trade", "autotrade", "trading bot", "execute orders", "order execution", "broker api", "place orders", "algo trading", "hft"],
+  "categoryRules": [
+    { "category": "ai-finance-agents", "match": ["agent", "llm", "multi-agent"] },
+    { "category": "mcp-server", "match": ["mcp"] },
+    { "category": "backtesting", "match": ["backtest"] },
+    { "category": "portfolio-analytics", "match": ["portfolio", "risk"] },
+    { "category": "filings-and-data", "match": ["edgar", "sec ", "filings", "market data"] },
+    { "category": "crypto", "match": ["crypto", "onchain", "defi"] }
+  ]
+}
