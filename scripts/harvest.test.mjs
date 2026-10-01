@@ -151,3 +151,11 @@ test("run: writes the report and state files, and dry-run writes nothing", async
   assert.match(readFileSync(join(root, "reports/2026-W40.md"), "utf8"), /# Weekly harvest 2026-W40/);
   assert.equal(JSON.parse(readFileSync(join(root, "data/candidates.json"), "utf8")).items["https://github.com/o/r"].status, "new");
 });
+
+test('metadata cannot inject report rows or HTML', () => {
+  const item = gh({ full_name: 'o/<script>|bad\nrow', html_url: 'javascript:alert(1)', license: { spdx_id: '<script>|custom\nrow' } });
+  const result = buildResult({ hits: hitsOf([item]), errors: ['<script>|bad\nrow'], catalog: [], state: { items: {} }, sources, now: NOW });
+  const md = renderReport({ result, week: '2026-W40', date: '2026-10-01', queryCount: 1 });
+  assert.ok(!md.includes('<script>')); assert.ok(!md.includes('javascript:'));
+  assert.ok(md.includes('&lt;script&gt;'));
+});

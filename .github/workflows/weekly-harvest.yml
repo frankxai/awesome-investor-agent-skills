@@ -12,7 +12,6 @@ on:
 permissions:
   contents: write
   pull-requests: write
-  issues: write
 
 concurrency:
   group: weekly-harvest
@@ -40,19 +39,25 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          open_prs="$(gh pr list --state open --limit 100 --json number --jq 'length')"
+          if [ "$open_prs" -ge 10 ]; then
+            echo "PR budget exhausted; harvest remains available in job artifacts for owner review."
+            exit 1
+          fi
           week="$(date -u +%G-W%V)"
           if git diff --quiet -- data/candidates.json && [ -z "$(git status --porcelain reports)" ]; then
             echo "Nothing new this week."
             exit 0
           fi
-          branch="harvest/$week"
+          branch="agent/harvest/$week-${{ github.run_id }}-${{ github.run_attempt }}"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$branch"
           git add data/candidates.json "reports/$week.md"
           git commit -m "chore(harvest): weekly candidates $week"
           git push -u origin "$branch"
-          if ! gh pr create --base main --head "$branch" --title "Weekly harvest $week" --body-file "reports/$week.md"; then
-            # PR creation is disabled by repository settings: file the report as an issue instead.
-            gh issue create --title "Weekly harvest $week" --body-file "reports/$week.md"
+          if ! gh pr create --draft --base main --head "$branch" --title "Weekly harvest $week" --body-file "reports/$week.md"; then
+            # The owner controls Actions PR permissions. Fail visibly without issue spam.
+            echo "Draft PR creation failed; inspect repository Actions permissions."
+            exit 1
           fi

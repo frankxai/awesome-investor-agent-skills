@@ -14,13 +14,13 @@ const PERMISSIVE = new Set(["MIT", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause",
 const WEAK_COPYLEFT = /^(LGPL|MPL|EPL|CDDL)/;
 const STRONG_COPYLEFT = /^(GPL|AGPL|SSPL|EUPL|OSL)/;
 
-/** What we may do with a project's code, from its SPDX id. `NOASSERTION` and `null` are the traps. */
+/** A discovery hint from SPDX metadata, never evidence of actual reuse permission. `NOASSERTION` and `null` are the traps. */
 export function classifyLicence(spdx) {
   if (spdx === null || spdx === undefined || spdx === "") return { class: "none", guidance: "No licence: all rights reserved. Do not copy code; read and learn only." };
   if (spdx === "NOASSERTION" || spdx === "Other") return { class: "verify", guidance: "Custom or unrecognised licence. Read LICENSE before any use; may be source-available or have commercial limits." };
-  if (PERMISSIVE.has(spdx)) return { class: "permissive", guidance: "May absorb with attribution recorded in NOTICE." };
-  if (/^(AGPL|SSPL)/.test(spdx)) return { class: "network-copyleft", guidance: "Network copyleft. Study only, or run unmodified as a separate process. Never copy into a product." };
-  if (WEAK_COPYLEFT.test(spdx)) return { class: "weak-copyleft", guidance: "Link or depend; copying files brings obligations. Review before absorbing." };
+  if (PERMISSIVE.has(spdx)) return { class: "permissive", guidance: "Potential reuse only after reading the actual LICENSE and recording attribution." };
+  if (/^(AGPL|SSPL)/.test(spdx)) return { class: "network-copyleft", guidance: "Network copyleft. Study for ideas only. Never copy into a product." };
+  if (WEAK_COPYLEFT.test(spdx)) return { class: "weak-copyleft", guidance: "Potential dependency only after reading LICENSE; copying files may bring obligations." };
   if (STRONG_COPYLEFT.test(spdx)) return { class: "strong-copyleft", guidance: "Copyleft. Study only unless our project uses the same terms." };
   return { class: "verify", guidance: `Unrecognised SPDX id ${spdx}. Read LICENSE.` };
 }
@@ -174,7 +174,13 @@ export function buildResult({ hits, errors, catalog, state, sources, now, limit 
   return { candidates: top, newlySeen, alreadyReviewed, skipped, pulse, errors, state: { version: 1, items } };
 }
 
+export function escapeMetadata(value) {
+  return String(value).replace(/[\r\n]+/g, " ").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/[|`*\[\]\\]/g, (c) => `\\${c}`);
+}
+
 export function renderReport({ result, week, date, queryCount }) {
+  const safe = (x) => typeof x === "string" ? escapeMetadata(x) : Array.isArray(x) ? x.map(safe) : x && typeof x === "object" ? Object.fromEntries(Object.entries(x).map(([k, v]) => [k, k === "url" ? (/^https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(v) ? v : "https://github.com") : safe(v)])) : x;
+  result = safe(result);
   const traps = result.candidates.filter((c) => ["network-copyleft", "strong-copyleft", "none", "verify"].includes(c.licenceClass));
   const lines = [
     `# Weekly harvest ${week}`,
